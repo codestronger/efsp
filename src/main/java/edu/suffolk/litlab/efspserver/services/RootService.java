@@ -8,9 +8,13 @@ import jakarta.ws.rs.core.Response;
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Path("/")
 public class RootService {
+
+  private static final Logger log = LoggerFactory.getLogger(RootService.class);
 
   @GET
   @Path("/")
@@ -25,6 +29,7 @@ public class RootService {
                 MessageSettingsService.class,
                 ApiUserSettingsService.class));
     endPoints.put("getVersionInfo", ServiceHelpers.EXTERNAL_URL + "/about");
+    log.info("Showing the root services");
     return Response.ok(endPoints).build();
   }
 

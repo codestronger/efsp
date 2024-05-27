@@ -3,8 +3,8 @@
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'efsp-staging'
-primary_region = 'bos'
+app = 'efsp-sng'
+primary_region = 'lax'
 kill_timeout = 60
 
 [build]
