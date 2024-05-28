@@ -29,7 +29,7 @@ public class RootService {
                 MessageSettingsService.class,
                 ApiUserSettingsService.class));
     endPoints.put("getVersionInfo", ServiceHelpers.EXTERNAL_URL + "/about");
-    log.info("Showing the root services");
+    log.info("Displaying EFSP services @ROOT");
     return Response.ok(endPoints).build();
   }
 
